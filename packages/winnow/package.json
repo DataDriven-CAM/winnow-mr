@@ -1,0 +1,31 @@
+{
+  "name": "winnow",
+  "version": "1.0.0",
+  "description": "Autonomous Makefile agent",
+  "main": "main",
+  "repository": "https://github.com/DataDriven-CAM/winnow-mr.git",
+  "directory": "packages/winnow",
+  "author": "rimmartin",
+  "license": "MIT",
+  "private": null,
+  "dependencies": {
+    "json-thresher": "DataDriven-CAM/json-thresher",
+    "urlcpp": "rimmartin/urlcpp",
+    "CLI11": "CLIUtils/CLI11",
+    "graph-v3": "stdgraph/graph-v3",
+    "stdexec": "nvidia/stdexec",
+    "json-graph-specification": "jsongraph/json-graph-specification",
+    "llama": "ggml-org/llama.cpp#master"
+  },
+  "devDependencies": {
+    "doctest": "onqtam/doctest",
+    "CLI11": "CLIUtils/CLI11",
+    "schemastore" : "SchemaStore/schemastore"
+  }
+  "scripts": {
+    "llama" : "cd cpp_modules/llama && pwd && mkdir -p build && cd build && ccmake -DCMAKE_BUILD_TYPE=Release -DLLAMA_BUILD_EXAMPLES=ON -DCMAKE_INSTALL_PREFIX=`pwd`/../dist .. && make -f Makefile all && make install",
+    "build" : "make -j 3 -f Makefile all && cd test && pwd && mkdir -p build/src && ls -lastr ${MODULE_DIRECTORY}/ && make  -j 3 -f Makefile all",
+    "clean" : "make clean",
+    "test" : "cnpm build && cd test && pwd && ./test --test-case='test metaphrasing csl-data.json schema to gbnf' "
+  }
+}

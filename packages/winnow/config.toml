@@ -1,0 +1,9 @@
+module-directory = "cpp_modules"
+model-directory = "models"
+timeout =  300
+
+[security]
+ssl-certification-location = "/etc/ssl/certs"
+username = ""
+passphrase = ""
+

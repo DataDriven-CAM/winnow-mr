@@ -1,0 +1,20 @@
+services:
+  winnow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/datadriven-cam/winnow:latest
+    container_name: winnow-agent
+    volumes:
+      # 1. Mount your local C++ project directory into the container to read the JGF file
+      - ./:/workspace
+      
+      # 2. Persist downloaded GGUF weights on the host machine so they don't erase on exit
+      - winnow_model_cache:/home/winnow/.cache/winnow
+      
+    # Run winnow natively against the mounted directory structure
+    command: ["orchestrate", "--manifest", "project_graph.jgf"]
+
+volumes:
+  winnow_model_cache:
+    name: winnow_model_cache

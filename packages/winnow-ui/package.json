@@ -1,0 +1,11 @@
+{
+  "name": "winnow-ui",
+  "version": "1.0.0",
+  "author": "rimmartin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rimmartin/winnow-mr.git",
+    "directory": "packages/winnow-ui"
+  }
+}

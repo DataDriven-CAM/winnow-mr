@@ -1,0 +1,15 @@
+{
+  "name": "winnow-mr",
+  "repository": "https://github.com/DataDriven-CAM/winnow-mr.git",
+  "private": false,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "compile:core": "make -C packages/winnow",
+    "dev:ui": "bun --filter winnow-ui dev",
+    "build:ui": "bun --filter winnow-ui build",
+    "test:all": "bun test packages/**/*"
+  }
+}
+
