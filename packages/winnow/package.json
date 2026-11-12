@@ -21,7 +21,7 @@
     "doctest": "onqtam/doctest",
     "CLI11": "CLIUtils/CLI11",
     "schemastore" : "SchemaStore/schemastore"
-  }
+  },
   "scripts": {
     "llama" : "cd cpp_modules/llama && pwd && mkdir -p build && cd build && ccmake -DCMAKE_BUILD_TYPE=Release -DLLAMA_BUILD_EXAMPLES=ON -DCMAKE_INSTALL_PREFIX=`pwd`/../dist .. && make -f Makefile all && make install",
     "build" : "make -j 3 -f Makefile all && cd test && pwd && mkdir -p build/src && ls -lastr ${MODULE_DIRECTORY}/ && make  -j 3 -f Makefile all",
