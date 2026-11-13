@@ -1,3 +1,4 @@
+[![Test Status](https://github.com/DataDriven-CAM/winnow-mr/actions/workflows/ci-release.yml/badge.svg)](https://github.com/DataDriven-CAM/winnow-mr/actions/workflows/ci-release.yml)
 # Winnow Monorepo
 
 An overview of the **Winnow** ecosystem, featuring the high-performance FFI engine and its dashboard interface.

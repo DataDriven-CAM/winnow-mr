@@ -62,7 +62,7 @@ jobs:
 
       - name: Run Workspace Tests
         # Executes all tests across the FFI layers and Hono/Vue 3 applications
-        run: cnpm test packages/**/*
+        run: cnpm test --workspaces
 
   # release:
   #   needs: test-and-build
